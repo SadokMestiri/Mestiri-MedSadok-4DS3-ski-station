@@ -44,7 +44,7 @@ public class PisteServicesImpl implements IPisteServices{
         return pisteRepository.findByColor(color);
     }
     @Override
-    public Piste assignPisteToSkier(Long numPiste,Long numSkier){
+    public Piste assignSkierToPiste(Long numPiste,Long numSkier){
         Piste piste=pisteRepository.findById(numPiste).orElse(null);
         Skier skier=skierRepository.findById(numSkier).orElse(null);
         piste.getSkiers().add(skier);

@@ -40,7 +40,7 @@ public class PisteController {
         return pisteServices.retrieveAllByColor(color);
     }
     @PutMapping("assignToSkier/{numPiste}/{numSkier}")
-    public Piste assignPisteToSkier(@PathVariable Long numPiste,@PathVariable Long numSkier){
-        return pisteServices.assignPisteToSkier(numPiste,numSkier);
+    public Piste assignSkierToPiste(@PathVariable Long numPiste,@PathVariable Long numSkier){
+        return pisteServices.assignSkierToPiste(numPiste,numSkier);
     }
 }

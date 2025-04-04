@@ -64,4 +64,8 @@ public class SkierController {
     public Skier addSkierAndAssignToCourse(@RequestBody Skier skier, @PathVariable Long numCourse) {
         return skierService.addSkierAndAssignToCourse(skier, numCourse);
     }
+    @GetMapping("bySubscriptionType/{typeSubscription}")
+    public List<Skier> retrieveSkiersBySubscriptionType(@PathVariable TypeSubscription typeSubscription){
+        return skierService.retrieveSkiersBySubscriptionType(typeSubscription);
+    }
 }

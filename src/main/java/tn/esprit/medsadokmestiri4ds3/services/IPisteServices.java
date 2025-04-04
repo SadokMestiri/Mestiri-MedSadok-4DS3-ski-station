@@ -13,5 +13,5 @@ public interface IPisteServices {
     List<Piste> retrieveAll();
 
     List<Piste> retrieveAllByColor(Color color);
-    Piste assignPisteToSkier(Long numPiste,Long numSkier);
+    Piste assignSkierToPiste(Long numPiste,Long numSkier);
 }
